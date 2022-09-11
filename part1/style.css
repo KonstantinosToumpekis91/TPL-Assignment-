@@ -8,7 +8,6 @@
 
 body {
   font-family: "Roboto";
-  height: 2000px;
 }
 
 #page-wrapper {
@@ -78,14 +77,15 @@ form input[type="submit"] {
   margin-top: 10px;
   padding: 5px 0;
 }
-
 #features {
-  margin-bottom: 30px;
-  padding-top: 15px;
+  background-color: #dedede;
+}
+#features > div {
   font-size: 16px;
   display: flex;
   justify-content: space-evenly;
-  border-top: 1px solid #a21232;
+  align-items: center;
+  padding: 6% 0;
 }
 
 strong {
@@ -98,7 +98,92 @@ strong {
 }
 
 #how-to {
+  padding-top: 25px;
   width: 680px;
   height: 450px;
   margin: 10px auto;
+}
+
+#prices {
+  background-color: #dedede;
+  height: 500px;
+}
+
+.card-img {
+  width: 450px;
+  height: 280px;
+}
+
+#prices > div {
+  top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#prices div.card {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+#prices div.card h2 {
+  margin: 6px 0;
+}
+
+button {
+  background-color: #fff;
+  color: #c13131;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin: 6px 0;
+}
+
+button:hover {
+  background-color: #c13131;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#copyright {
+  margin: 3px;
+  font-size: 14px;
+  color: #726a6a;
+  text-align: center;
+}
+
+@media (max-width: 930px) {
+  #prices {
+    overflow: auto;
+  }
+  #prices > div {
+    flex-direction: column;
+  }
+  #prices > div .card {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  #features > div {
+    flex-direction: column;
+  }
+
+  iframe {
+    margin-left: 50px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 630px) {
+  iframe {
+    width: 70%;
+  }
+}
+@media (max-width: 540px) {
+  iframe {
+    margin-left: 20px;
+  }
 }
